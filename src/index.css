@@ -1,5 +1,21 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+
+.login-header {
+	text-align: center;
+	background-color: #DDD;
+	border: 1px ridge grey;
+	border-radius: 5px 5px 0 0;
+}
+
+.login-body {
+	display: flex;
+	justify-content: center;
+}
+
+#username-select {
+	width: 200px;
 }
