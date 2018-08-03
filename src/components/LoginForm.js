@@ -24,13 +24,18 @@ class LoginForm extends Component {
 		} else {
 			const { dispatch } = this.props
 			dispatch(setAuthedUser(this.state.optionValue))
+
+			this.setState((prevState, props) => ({
+				optionValue: 'default'
+			}))
 		}
 	}
 
 	render () {
 		// console.log('loginform:', this.props)
+		const { optionValue } = this.state
 		return (
-			<div>
+			<div className='login-main-container'>
 				<div className='login-header'>
 					<h3>
 						Welcome to the Would You Rather App!
@@ -41,7 +46,7 @@ class LoginForm extends Component {
 				</div>
 				<div className='login-body'>
 					<form onSubmit={this.onFormSubmit}>
-						<select name="username-select" id="username-select" onChange={this.onOptionChange} value={this.state.optionValue}>
+						<select name="username-select" id="username-select" onChange={this.onOptionChange} value={optionValue}>
 							<option disabled value='default'> -- select a user -- </option>
 							{
 								this.props.users.map((user) => {

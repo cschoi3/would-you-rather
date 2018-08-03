@@ -1,21 +1,171 @@
 body {
 	margin: 0;
 	padding: 0;
-	font-family: sans-serif;
+	font-family: Tahoma, Geneva, sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+a:hover {
+	cursor: pointer;
+}
+
+.show {
+	visibility: visible;
+}
+
+.hide {
+	visibility: hidden;
+}
+
+.App {
+	width: 100%;
+}
+
+.nav-main-container {
+	width: 60%;
+	background-color: white;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+.nav-links {
+	display: flex;
+	justify-content: space-evenly;
+	padding: 10px;
+	list-style: none;
+}
+
+.login-main-container {
+	width: 50%;
+	max-width: 560px;
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
 }
 
 .login-header {
 	text-align: center;
-	background-color: #DDD;
+	background-color: #EEE;
 	border: 1px ridge grey;
 	border-radius: 5px 5px 0 0;
+	padding: 0 10px;
+}
+
+.login-header h3 {
+	font-size: 15px;
 }
 
 .login-body {
-	display: flex;
-	justify-content: center;
+	border: 1px ridge grey;
+	border-top: none;
+}
+
+.login-body form {
+	width: 100%;
+	padding: 10px 20px;
 }
 
 #username-select {
-	width: 200px;
+	width: 80%;
+	margin-right: 10px;
+	box-sizing: border-box;
+}
+
+.questions-dashboard-container {
+	width: 50%;
+	margin: 0 auto;
+}
+
+.questions-dashboard-tabs {
+	display: flex;
+	justify-content: space-around;
+	list-style: none;
+	background-color: #EEE;
+	border: 1px ridge grey;
+	border-radius: 5px 5px 0 0;
+	padding: 20px 10px;
+	margin-bottom: 0;
+}
+
+.questions-dashboard-body {
+	padding: 10px;
+	border: 1px ridge grey;
+	border-radius: 0 0 5px 5px;
+	border-top: none;
+}
+
+.questions-header {
+	
+}
+
+
+@media only screen and (max-width : 768px) {
+
+	.nav-main-container {
+		width: 80%;
+		font-size: 13px;
+		background-color: white;
+		overflow: hidden;
+		margin: 0 auto;
+	}
+
+	.login-main-container {
+		width: 80%;
+		max-width: 560px;
+		display: flex;
+		flex-direction: column;
+		margin: 0 auto;
+	}
+
+	.login-header h3 {
+		font-size: 13px;
+	}
+
+	.login-header h5 {
+		font-size: 11px;
+	}
+
+
+	#username-select {
+		width: 70%;
+		margin-right: 10px;
+		box-sizing: border-box;
+	}
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+
+	.nav-main-container {
+		width: 80%;
+		font-size: 15px;
+		background-color: white;
+		overflow: hidden;
+		margin: 0 auto;
+	}
+
+	.login-main-container {
+		width: 80%;
+		max-width: 560px;
+		display: flex;
+		flex-direction: column;
+		margin: 0 auto;
+	}
+
+	.login-header h3 {
+		font-size: 15px;
+	}
+
+	.login-header h5 {
+		font-size: 13px;
+	}
+
+	#username-select {
+		width: 70%;
+		margin-right: 10px;
+		box-sizing: border-box;
+	}
 }

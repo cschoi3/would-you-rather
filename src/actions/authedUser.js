@@ -5,11 +5,13 @@ export function setAuthedUser (id) {
 	return {
 		type: SET_AUTHED_USER,
 		id,
+		loggedIn: true,
 	}
 }
 
 export function removeAuthedUser () {
 	return {
-		type: RM_AUTHED_USER
+		type: RM_AUTHED_USER,
+		loggedIn: false,
 	}
 }

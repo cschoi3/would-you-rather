@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import { getQuestions } from '../actions/questions'
 import { getUsers } from '../actions/users'
+import Navigation from './Navigation'
 import LoginForm from './LoginForm'
 import QuestionsDashboard from './QuestionsDashboard'
 
@@ -9,7 +9,6 @@ class App extends Component {
 
 	componentDidMount () {
 		console.log('hi')
-		this.props.dispatch(getQuestions())
 		this.props.dispatch(getUsers())
 	}
 
@@ -17,9 +16,10 @@ class App extends Component {
 		console.log("props.loggedIn", this.props.loggedIn)
 		return (
 			<div className="App">
+				<Navigation/>
 				{this.props.loggedIn === true
-					? <QuestionsDashboard/>
-					: <LoginForm/>
+					? <LoginForm/>
+					: <QuestionsDashboard/>
 				}
 			</div>
 		);
@@ -28,7 +28,7 @@ class App extends Component {
 
 function mapStateToProps({authedUser}) {
 	return {
-		loggedIn: authedUser !== null
+		loggedIn: authedUser.loggedIn
 	}
 }
 
