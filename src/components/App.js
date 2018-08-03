@@ -20,6 +20,7 @@ class App extends Component {
 				{this.props.loggedIn === true
 					? <LoginForm/>
 					: <QuestionsDashboard/>
+					//remember to swap the above two, have login in the truth section just while developing
 				}
 			</div>
 		);

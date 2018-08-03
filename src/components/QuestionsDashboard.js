@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { getQuestions } from '../actions/questions'
+import { getUsers } from '../actions/users'
 import Question from './Question';
 
 class QuestionsDashboard extends Component {
 
 	componentDidMount () {
+		//take below out after developement done
+		this.props.dispatch(getUsers())
 		this.props.dispatch(getQuestions())
 	}
 

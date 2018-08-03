@@ -98,8 +98,22 @@ a:hover {
 	border-top: none;
 }
 
-.questions-header {
-	
+.question {
+	padding: 10px;
+	margin-bottom: 15px;
+	border: 1px ridge grey;
+	border-radius: 5px;
+}
+
+.question:first-child {
+	margin-top: 15px;
+}
+
+.question-header {
+	background-color: #EEE;
+	border: 1px ridge grey;
+	border-radius: 5px 5px 0 0;
+	padding: 10px 15px;
 }
 
 
