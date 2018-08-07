@@ -14,8 +14,8 @@ class Question extends Component {
 				<div className='question-header'>
 					{authorName} asks:
 				</div>
-				<div>
-					<img src={authorAvatar} alt={authorName} height="42" width="42"/>
+				<div className='question-body'>
+					<img src={authorAvatar} alt={authorName}/>
 					<div className='question-options'>
 						<h7>Would you rather</h7>
 						<p>{shortenedOption(option1)}</p>

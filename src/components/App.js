@@ -17,10 +17,12 @@ class App extends Component {
 		return (
 			<div className="App">
 				<Navigation/>
-				{this.props.loggedIn === true
-					? <LoginForm/>
-					: <QuestionsDashboard/>
-					//remember to swap the above two, have login in the truth section just while developing
+				<QuestionsDashboard/>
+				 {//this.props.loggedIn === true
+				// 	? <QuestionsDashboard/>
+				// 	: <LoginForm/>
+				// 	//remember to swap the above two, have login in the truth section just while developing
+				// 
 				}
 			</div>
 		);
